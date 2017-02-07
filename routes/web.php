@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/scratch', 'Scratch\ScratchController@index');
-
+Route::get('/dashboard', 'Dashboard\DashboardController@index');
 Route::get('/user', 'User\UserController@index');
+Route::get('/scratch', 'Scratch\ScratchController@index');

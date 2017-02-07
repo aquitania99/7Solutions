@@ -13,7 +13,9 @@
         {{--@show--}}
 
         <div class="page-container">
-            @yield('content')
+            <div class="page-content">
+                @yield('content')
+            </div>
         </div>
         <!-- Core JS files -->
         <script type="text/javascript" src="{{asset('assets/js/plugins/loaders/pace.min.js')}}"></script>

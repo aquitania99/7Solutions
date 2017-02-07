@@ -4,7 +4,7 @@
 
 @section('headerCSS')
     @parent
-    @endsection
+@endsection
 
 @section('mainNavBar')
     @include('components.main-navbar')
@@ -14,8 +14,17 @@
     @include('components.side-navbar')
     <div class="content-wrapper">
         @include('components.pageHeader')
-        <div class="row">
-            @include('components.footer')
+        <div class="content">
+            <div class="row">
+                @yield('content-row')
+            </div>
+            <div class="row">
+                @include('components.footer')
+            </div>
         </div>
     </div>
+@endsection
+
+@section('extraJs')
+    <script type="text/javascript" src="{{asset('assets/js/pages/dashboard.js')}}"></script>
 @endsection

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Scratch;
+namespace Akela\Http\Controllers\Scratch;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Akela\Http\Controllers\Controller;
 
 class ScratchController extends Controller
 {

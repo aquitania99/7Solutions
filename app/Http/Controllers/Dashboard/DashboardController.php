@@ -1,12 +1,11 @@
 <?php
 
-namespace Akela\Http\Controllers\User;
+namespace Akela\Http\Controllers\Dashboard;
 
 use Illuminate\Http\Request;
 use Akela\Http\Controllers\Controller;
-use Akela\Models\User;
 
-class UserController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $data = User::all();
-
-        return view('users.show')->with('data',$data);
-
-        //return view('users.show')->with('data',$data);
+        return view('dashboard.index');
     }
 
     /**
