@@ -244,7 +244,6 @@
                         </select>
                     </div>
                 </div>
-                </div>
             </div>
         </fieldset>
 
