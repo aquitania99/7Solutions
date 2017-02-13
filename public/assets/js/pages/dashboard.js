@@ -30,7 +30,7 @@ $(function() {
         {
             startDate: moment().subtract('days', 29),
             endDate: moment(),
-            minDate: '01/01/2012',
+            minDate: '01/01/2007',
             maxDate: '12/31/2016',
             dateLimit: { days: 60 },
             ranges: {

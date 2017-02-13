@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', 'Dashboard\DashboardController@index');
-Route::get('/user', 'User\UserController@index');
+Route::name('dashboard')->get('/dashboard', 'Dashboard\DashboardController@index');
+
+Route::prefix('user')->group(function() {
+    Route::get('/', 'User\UserController@index');
+    Route::get('/add', 'User\UserController@create');
+    Route::post('/user','User\UserController@store');
+});
+
+
 Route::get('/scratch', 'Scratch\ScratchController@index');

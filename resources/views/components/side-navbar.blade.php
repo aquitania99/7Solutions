@@ -39,12 +39,12 @@
                         <a href="#"><i class="fa fa-user-plus"></i> <span>Customers</span></a>
                         <ul>
                             <li><a href="{{'/user'}}">Show All</a></li>
-                            <li><a href="{{'/student/add'}}">Add New</a></li>
-                            <li><a href="{{'/student/search'}}">Search</a></li>
+                            <li><a href="{{'/user/add'}}">Add New</a></li>
+                            <li><a href="{{'/user/search'}}">Search</a></li>
                             {{--<li><a href="#">Update</a></li>--}}
                             <li class="navigation-divider"></li>
                             <li><a href="boxed_default.html">Quotations</a></li>
-                            <li><a href="{{'/student/documents'}}">Documents</a> </li>
+                            <li><a href="{{'/user/documents'}}">Documents</a> </li>
                         </ul>
                     </li>
                     <li>

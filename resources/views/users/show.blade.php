@@ -8,7 +8,7 @@
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Email/th>
+                <th>Email</th>
                 <th>DOB</th>
                 <th>Status</th>
                 <th class="text-center">Actions</th>
@@ -45,8 +45,8 @@
     @endsection
 @section('extraJs')
     <!-- Theme JS files -->
-    <script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/js/pages/datatables_basic.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/plugins/tables/datatables/datatables.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/pages/datatables_basic.js')}}"></script>
     <!-- /theme JS files -->
     @parent
 @stop

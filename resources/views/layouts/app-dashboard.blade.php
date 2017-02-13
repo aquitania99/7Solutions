@@ -1,10 +1,5 @@
+
 @extends('layouts.app')
-
-@section('title', 'Page Title')
-
-@section('headerCSS')
-    @parent
-@endsection
 
 @section('mainNavBar')
     @include('components.main-navbar')
@@ -26,5 +21,6 @@
 @endsection
 
 @section('extraJs')
+    @parent
     <script type="text/javascript" src="{{asset('assets/js/pages/dashboard.js')}}"></script>
 @endsection
