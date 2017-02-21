@@ -1,6 +1,4 @@
 <!-- Wizard with validation -->
-{{--<div class="panel panel-white">--}}
-
     <form class="form-validation" action="{{'/user'}}" method="post" id="store">
         {!! csrf_field() !!}
         <fieldset class="step" id="validation-step1">
@@ -250,28 +248,29 @@
         <fieldset class="step" id="validation-step2">
             <h6 class="form-wizard-title text-semibold">
                 <span class="form-wizard-count">2</span>
-                Your education
-                <small class="display-block">Let us know about your degree</small>
+                Your current address
+                <small class="display-block">Let us know your current address</small>
             </h6>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="form-group">
-                        <label>University: <span class="text-danger">*</span></label>
-                        <input type="text" name="university" placeholder="University name" class="form-control required">
+                        <label>Street address: <span class="text-danger">*</span></label>
+                        <input type="text" name="streetAddress" placeholder="123 Sesame Street" class="form-control required">
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="form-group">
-                        <label>Country:</label>
-                        <select name="university-country" data-placeholder="Choose a Country..." class="select">
-                            <option></option>
-                            <option value="1">United States</option>
-                            <option value="2">France</option>
-                            <option value="3">Germany</option>
-                            <option value="4">Spain</option>
-                        </select>
+                        <label>Suburb: <span class="text-danger">*</span></label>
+                        <input type="text" name="suburb" placeholder="Surry Hills" class="form-control required">
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>State: <span class="text-danger">*</span></label>
+                        <input type="text" name="state" placeholder="NSW" class="form-control required">
                     </div>
                 </div>
             </div>
@@ -279,17 +278,62 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Degree level: <span class="text-danger">*</span></label>
-                        <input type="text" name="degree-level" placeholder="Bachelor, Master etc." class="form-control required">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Specialization:</label>
-                        <input type="text" name="specialization" placeholder="Design, Development etc." class="form-control">
+                        <label class="display-block text-semibold">Country:</label>
+                        <select name="country" data-placeholder="Choose a Country..." class="select">
+                            <option></option>
+                            <option value="1">United States</option>
+                            <option value="2">France</option>
+                            <option value="3">Germany</option>
+                            <option value="4">Spain</option>
+                            <option value="5">......</option>
+                            <option value="6">Colombia</option>
+                            <option value="7">Argentina</option>
+                            <option value="8">Chile</option>
+                        </select>
                     </div>
                 </div>
-
+                
                 <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Postcode: <span class="text-danger">*</span></label>
+                        <input type="text" name="postcode" placeholder="2000" class="form-control required">
+                    </div>
+
+<!--                    <div class="form-group">
+                        <label>Specialization:</label>
+                        <input type="text" name="specialization" placeholder="Design, Development etc." class="form-control">
+                    </div>-->
+                </div>
+                
+                <!-- Address Same as Current -->
+            <div class="row">
+                <div class="col-md-10">
+                    <!--<p>Is your <strong>current address</strong> same as your <strong>Home Country residential address</strong>? </p>-->
+                    <div class="form-group">
+                        <!--<label class="display-block text-semibold">Yes</label>-->
+                        <label class="radio-inline">
+                            Is your <strong>current address</strong> same as your <strong>Home Country residential address</strong>?
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="radio-address-country" class="styled" value="yes" checked="checked">
+                            Yes
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" name="radio-address-country" class="styled" value="No">
+                            No
+                        </label>
+                    </div>
+                </div>
+<!--                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="display-block text-semibold">Nationality: <span class="text-danger">*</span></label>
+                        <input type="text" name="nationality" class="form-control required" placeholder="Australian">
+                    </div>
+                </div>-->
+            </div>
+
+<!--                <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-6">
                             <label>From:</label>
@@ -350,7 +394,7 @@
                         <label>Language of education:</label>
                         <input type="text" name="education-language" placeholder="English, German etc." class="form-control">
                     </div>
-                </div>
+                </div>-->
             </div>
         </fieldset>
 
@@ -524,5 +568,4 @@
             <button class="btn btn-info" id="validation-next" type="submit">Next</button>
         </div>
     </form>
-{{--</div>--}}
 <!-- /wizard with validation -->

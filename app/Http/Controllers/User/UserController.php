@@ -20,7 +20,11 @@ class UserController extends Controller
     {
         $data = User::all();
 
-        return view('users.show')->with('data',$data);
+        return view('users.show')->with([
+            'data' => $data,
+            'link' => 'dashboard',
+            'page' => 'Add User'
+        ]);
     }
 
     /**

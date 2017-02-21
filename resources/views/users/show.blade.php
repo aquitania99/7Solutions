@@ -8,10 +8,13 @@
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Email</th>
-                <th>DOB</th>
+                <th>Email Address</th>
+                <th>Telephone</th>
                 <th>Status</th>
-                <th class="text-center">Actions</th>
+                <th>Passport #</th>
+                <th>Registry Date</th>
+                <th>User Type</th>
+                <!--<th class="text-center">Actions</th>-->
             </tr>
             </thead>
             <tbody>
@@ -20,9 +23,12 @@
                     <td>{{$row->firstname}}</td>
                     <td>{{$row->lastname}}</td>
                     <td>{{$row->email}}</td>
-                    <td>{{$row->dob}}</td>
+                    <td>{{$row->mobile}}</td>
                     <td><span class="label label-success">Active</span></td>
-                    <td class="text-center">
+                    <td>ABC123456</td>
+                    <td>{{$row->created_at}}</td>
+                    <td>{{$row->type}}</td>
+<!--                    <td class="text-center">
                         <ul class="icons-list">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -36,7 +42,7 @@
                                 </ul>
                             </li>
                         </ul>
-                    </td>
+                    </td>-->
                 </tr>
             @endforeach
             </tbody>
@@ -45,8 +51,8 @@
     @endsection
 @section('extraJs')
     <!-- Theme JS files -->
-    <script type="text/javascript" src="{{asset('js/plugins/tables/datatables/datatables.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/pages/datatables_basic.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/datatables_basic.js')}}"></script>
     <!-- /theme JS files -->
     @parent
 @stop
