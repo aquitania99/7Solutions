@@ -16,8 +16,8 @@
 
     <div class="breadcrumb-line">
         <ul class="breadcrumb">
-            <li><a href="{{ $link }}"><i class="icon-home2 position-left"></i> Home</a></li>
-            <li class="active">{{ $page }}</li>
+            <li><a href="{{ ( !empty($link)?$link : '/') }}"><i class="icon-home2 position-left"></i> Home</a></li>
+            <li class="active">{{ ( !empty($page)? $page : 'home' ) }}</li>
         </ul>
 
         {{--<ul class="breadcrumb-elements">--}}

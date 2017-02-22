@@ -18,6 +18,8 @@ class CreateOrdersTable extends Migration
             $table->integer('user_id');
             $table->integer('product_id');
             $table->integer('provider_id');
+            $table->decimal('weekly_cost');
+            $table->integer('time_duration');
             $table->decimal('total_cost');
             $table->integer('instalments');
             $table->string('visa_id');
